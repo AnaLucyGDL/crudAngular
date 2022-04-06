@@ -21,8 +21,9 @@ export class ListarProductoComponent implements OnInit {
     });
   }
 
-  borrarRegistro(){
-
+  borrarRegistro(id:any, iControl:any){
+    console.log(id);
+    console.log(iControl);
   }
 
 }
