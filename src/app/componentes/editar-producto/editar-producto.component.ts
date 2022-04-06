@@ -9,16 +9,27 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./editar-producto.component.css']
 })
 export class EditarProductoComponent implements OnInit {
+  formularioProductos: FormGroup;
   elID:any;
 
   constructor(
     private activeRoute:ActivatedRoute,
-    private crudService:CrudService
+    private crudService:CrudService,
+    public formulario:FormBuilder
   ) { 
     this.elID = this.activeRoute.snapshot.paramMap.get('id');
     console.log(this.elID);
     this.crudService.obtenerProducto(this.elID).subscribe(respuesta =>{
       console.log(respuesta);
+      this.formularioProductos.setValue({
+        nombre: respuesta[0]['nombre'],
+        precio: respuesta[0]['precio']
+      })
+    });
+
+    this.formularioProductos=this.formulario.group({
+      nombre:[''],
+      precio:['']
     });
   }
 

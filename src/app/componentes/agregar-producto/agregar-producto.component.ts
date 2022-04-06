@@ -12,7 +12,8 @@ export class AgregarProductoComponent implements OnInit {
 
   formularioProductos: FormGroup;
 
-  constructor(public formulario:FormBuilder, 
+  constructor(
+    public formulario:FormBuilder, 
     private CrudService:CrudService, 
     private ruteador:Router) { 
 
