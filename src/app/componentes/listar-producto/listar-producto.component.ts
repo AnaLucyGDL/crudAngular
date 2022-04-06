@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from 'src/app/servicio/crud.service';
 
 @Component({
   selector: 'app-listar-producto',
