@@ -30,8 +30,9 @@ export class AgregarProductoComponent implements OnInit {
   enviarDatos():any {
     console.log("Prueba");
     console.log(this.formularioProductos.value);
-    this.CrudService.agregarProducto(this.formularioProductos.value).subscribe();
-    this.ruteador.navigateByUrl('/listar-producto');
+    this.CrudService.agregarProducto(this.formularioProductos.value).subscribe(respuesta =>{
+      this.ruteador.navigateByUrl('/listar-producto');
+    });
   }
 
 }

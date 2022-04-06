@@ -3,15 +3,15 @@
         Agregar producto
     </div>
     <div class="card-body">
-        <form [formGroup]="formularioProductos" (ngSubmit)="enviarDatos()">
+        <form ngNativeValidate [formGroup]="formularioProductos" (ngSubmit)="enviarDatos()">
             <div class="mb-3">
               <label for="" class="form-label">Nombre</label>
-              <input type="text"
+              <input required type="text"
                 class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Nombre...">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Precio</label>
-                <input type="number"
+                <input required type="number"
                   class="form-control" name="" formControlName="precio" id="" aria-describedby="helpId" placeholder="Precio...">
               </div>
               <div class="btn-group" role="group" aria-label="">

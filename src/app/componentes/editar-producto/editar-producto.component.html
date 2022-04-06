@@ -3,15 +3,15 @@
         Editar producto
     </div>
     <div class="card-body">
-        <form [formGroup]="formularioProductos" (ngSubmit)="enviarDatos()">
+        <form ngNativeValidate [formGroup]="formularioProductos" (ngSubmit)="enviarDatos()">
             <div class="mb-3">
               <label for="" class="form-label">Nombre</label>
-              <input formControlName="nombre" type="text"
+              <input required formControlName="nombre" type="text"
                 class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre...">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Precio</label>
-                <input formControlName="precio" type="number"
+                <input required formControlName="precio" type="number"
                   class="form-control" name="" id="" aria-describedby="helpId" placeholder="Precio...">
               </div>
               <div class="btn-group" role="group" aria-label="">
