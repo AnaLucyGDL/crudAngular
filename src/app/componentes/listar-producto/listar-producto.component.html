@@ -18,7 +18,9 @@
                     <td>{{producto.nombre}}</td>
                     <td>{{producto.precio}}</td>
                     <td>
-                        <a routerLink="/editar-producto/{{producto.id}}"> Editar </a> | Borrar</td>
+                        <a class="btn btn-info" routerLink="/editar-producto/{{producto.id}}"> Editar </a> | 
+                        <a class="btn btn-danger" (click)="borrarRegistro(producto.id, iControl)" role="button">Borrar</a>
+                    </td>
                 </tr>
             </tbody>
         </table>

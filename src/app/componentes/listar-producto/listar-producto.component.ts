@@ -21,4 +21,8 @@ export class ListarProductoComponent implements OnInit {
     });
   }
 
+  borrarRegistro(){
+
+  }
+
 }
