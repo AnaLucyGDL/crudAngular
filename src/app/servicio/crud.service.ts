@@ -26,4 +26,8 @@ API: string= 'http://localhost/productos'; //API de php Crud
   obtenerProducto(id:any):Observable<any>{
     return this.clienteHttp.get(this.API+"?consultar="+id);
   }
+
+  editarProducto(id:any, datosProducto:any):Observable<any>{
+    return this.clienteHttp.post(this.API+"?actualizar="+id,datosProducto);
+  }
 }
