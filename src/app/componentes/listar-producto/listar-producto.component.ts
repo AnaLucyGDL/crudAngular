@@ -24,6 +24,10 @@ export class ListarProductoComponent implements OnInit {
   borrarRegistro(id:any, iControl:any){
     console.log(id);
     console.log(iControl);
+    if (window.confirm("¿Desea borrar este registro?"))
+    this.crudService.borrarRegistro(id).subscribe(respuesta => {
+      this.Productos.splice(iControl,1);
+    });
   }
 
 }

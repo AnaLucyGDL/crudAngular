@@ -19,4 +19,7 @@ API: string= 'http://localhost/productos'; //API de php Crud
     return this.clienteHttp.get(this.API);
   }
 
+  borrarRegistro(id:any):Observable<any>{
+    return this.clienteHttp.get(this.API+"?borrar"+id);
+  }
 }
