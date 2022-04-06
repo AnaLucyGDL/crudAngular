@@ -7,10 +7,18 @@ import { CrudService } from 'src/app/servicio/crud.service';
   styleUrls: ['./listar-producto.component.css']
 })
 export class ListarProductoComponent implements OnInit {
+  Productos: any;
 
-  constructor() { }
+
+  constructor(
+    private crudService:CrudService
+  ) { }
 
   ngOnInit(): void {
+    this.crudService.obtenerProductos().subscribe(respuesta => {
+      console.log(respuesta);
+      this.Productos=respuesta;
+    });
   }
 
 }

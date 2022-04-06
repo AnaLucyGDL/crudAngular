@@ -13,12 +13,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>9</td>
-                    <td>Vinito</td>
-                    <td>10800</td>
+                <tr *ngFor="let producto of Productos; let iControl=index">
+                    <td>{{producto.id}}</td>
+                    <td>{{producto.nombre}}</td>
+                    <td>{{producto.precio}}</td>
                     <td>
-                        <a routerLink="/editar-producto/1"> Editar </a> | Borrar</td>
+                        <a routerLink="/editar-producto/{{producto.id}}"> Editar </a> | Borrar</td>
                 </tr>
             </tbody>
         </table>
