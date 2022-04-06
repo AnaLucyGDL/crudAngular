@@ -36,4 +36,8 @@ export class EditarProductoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  enviarDatos():any{
+    console.log(this.elID);
+    console.log(this.formularioProductos.value);
+  }
 }
