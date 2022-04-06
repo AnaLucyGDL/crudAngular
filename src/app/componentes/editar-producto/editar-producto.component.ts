@@ -12,10 +12,14 @@ export class EditarProductoComponent implements OnInit {
   elID:any;
 
   constructor(
-    private activeRoute:ActivatedRoute
+    private activeRoute:ActivatedRoute,
+    private crudService:CrudService
   ) { 
     this.elID = this.activeRoute.snapshot.paramMap.get('id');
-    console.log(this.elID)
+    console.log(this.elID);
+    this.crudService.obtenerProducto(this.elID).subscribe(respuesta =>{
+      console.log(respuesta);
+    });
   }
 
   ngOnInit(): void {
